@@ -12,8 +12,11 @@
     "authors": [
         {
             "name": "Ethan Kletschke",
-            "email": "bbruhingson@gmail.com"
+            "email": "bbruhingson@gmail.com",
+            "role": "Project Leader"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^12.3"
+    }
 }
