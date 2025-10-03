@@ -20,10 +20,10 @@ class Point {
   private int $y;
 
   /**
-   * @param int $x the X-coordinate on the Cartesian plane
-   * @param int $y the Y-coordinate on the Cartesian plane
+   * @param int $x the X-coordinate on the Cartesian plane. 
+   * @param int $y the Y-coordinate on the Cartesian plane.
    */
-  public function __construct(int $x, int $y) {
+  public function __construct(int $x = 0, int $y = 0) { // Default vals allow for 
     $this->x = $x;
     $this->y = $y;
   }
@@ -45,6 +45,16 @@ class Point {
   }
 
   /**
+   * Sets the value of the X-coordinate of this point.
+   * @param int $x The new X value.
+   * @return void 
+   * @since 0.2.0
+   */
+  public function setX(int $x): void {
+    $this->x = $x;
+  }
+
+  /**
    * Determines whether the current point is situated on the
    * Cartesian plane's origin of <code>(0,0)</code>.
    * @return bool <code>true</code> if the x and y coordinates are both 0.
@@ -61,6 +71,17 @@ class Point {
    */
   public static function pointIsOrigin(Point $p): bool {
     return ($p->x === 0) && ($p->y === 0);
+  }
+
+  /**
+   * Determines whether the current Point object overlaps (has equal points) to another
+   * Point object.
+   * @param \PHPShapes\Shapes\Point $p1 The point to compare.
+   * @return bool true if the points are equal.
+   * @since 0.2.0
+   */
+  public function overlapsWith(Point $p1): bool {
+    return ($this->x === $p1->x) && ($this->y === $p1->y); 
   }
 
   /**

@@ -3,7 +3,7 @@
     "description": "A shape API for PHP",
     "type": "library",
     "license": "MIT",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "autoload": {
         "psr-4": {
             "EthanKletschke\\PhpShapes\\": "src/"
@@ -15,8 +15,5 @@
             "email": "ethankletschke@outlook.com",
             "role": "Main author and leader of the project"
         }
-    ],
-    "require-dev": {
-        "phpunit/phpunit": "^12.3"
-    }
+    ]
 }

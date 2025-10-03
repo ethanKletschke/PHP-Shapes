@@ -3,7 +3,7 @@
 A shape library for PHP. Meant as a skills reference only.
 
 - Author: Ethan Kletschke
-- Version: `0.1.1`
+- Version: `0.2.0`
 - Environment(s): Windows 11
 - License: MIT
 
