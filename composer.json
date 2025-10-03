@@ -15,5 +15,8 @@
             "email": "ethankletschke@outlook.com",
             "role": "Main author and leader of the project"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.4"
+    }
 }
