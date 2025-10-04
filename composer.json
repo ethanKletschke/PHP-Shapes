@@ -3,7 +3,7 @@
     "description": "A shape API for PHP",
     "type": "library",
     "license": "MIT",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "autoload": {
         "psr-4": {
             "EthanKletschke\\PhpShapes\\": "src/"

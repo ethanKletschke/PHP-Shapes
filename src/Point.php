@@ -23,7 +23,7 @@ class Point {
    * @param int $x the X-coordinate on the Cartesian plane. 
    * @param int $y the Y-coordinate on the Cartesian plane.
    */
-  public function __construct(int $x = 0, int $y = 0) { // Default vals allow for 
+  public function __construct(int $x, int $y) {
     $this->x = $x;
     $this->y = $y;
   }
@@ -52,6 +52,16 @@ class Point {
    */
   public function setX(int $x): void {
     $this->x = $x;
+  }
+
+  /**
+   * Sets the value of the Y-coordinate of this point.
+   * @param int $y The new Y value.
+   * @return void
+   * @since 0.3.0
+   */
+  public function setY(int $y): void {
+    $this->y = $y;
   }
 
   /**

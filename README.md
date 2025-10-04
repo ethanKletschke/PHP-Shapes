@@ -3,17 +3,20 @@
 A shape library for PHP. Meant as a skills reference only.
 
 - Author: Ethan Kletschke
-- Version: `0.2.0`
+- Version: `0.3.0`
 - Environment(s): Windows 11
 - License: MIT
 
-## Concepts Used
+## What is This Project?
 
-- OOP concepts
-  - Interfaces
-  - Inheritance
-  - Extending classes
-  - Implementing interfaces
+This is a shapes class library built solely with PHP. Pretty self-explanatory.
+
+This project is mainly a skills reference for my portfolio, so it's definitely not built
+for use in production (I mean, why would you use these basic shapes in a production
+environment anyways?). 
+
+There's tons of documentation comments which explain the code pretty well, 
+so it'd be redundant to talk about the code and classes here. :)
 
 ## Inspiration
 

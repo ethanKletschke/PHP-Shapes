@@ -32,10 +32,47 @@ class Rectangle implements IShape {
    * <code>a = l x w</code>, where <code>a</code> is the area
    * being calculated, <code>l</code> is the length of the rectangle, 
    * and <code>w</code> is the width of the rectangle.
-   * 
    * @return int The integer area of the rectangle.
    */
   public function getArea(): int {
     return $this->length * $this->width;
+  }
+  
+  /**
+   * Gets the vertical length of the rectangle.
+   * @return int The rectangle's length.
+   * @since 0.3.0
+   */
+  public function getLength(): int {
+    return $this->length;
+  }
+
+  /**
+   * Gets the horizontal width of the rectangle.
+   * @return int The rectangle's width.
+   * @since 0.3.0
+   */
+  public function getWidth(): int {
+    return $this->width;
+  }
+
+  /**
+   * Sets a new vertical length for the rectangle.
+   * @param int $len The new length.
+   * @return void
+   * @since 0.3.0
+   */
+  public function setLength(int $len): void {
+    $this->length = $len;
+  }
+
+  /**
+   * Sets a new horizontal width for the rectangle.
+   * @param int $width The new width.
+   * @return void
+   * @since 0.3.0
+   */
+  public function setWidth(int $width): void {
+    $this->width = $width;
   }
 }

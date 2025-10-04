@@ -8,6 +8,15 @@ namespace PHPShapes\Shapes;
  */
 class Path {
   /**
+   * The number of points in the path.
+   * @var int
+   * @since 0.3.0
+   */
+  private int $len {
+    get => count($this->points);
+  }
+
+  /**
    * An array of points that make up the path.
    * @var \PHPShapes\Shapes\Point[]
    */
@@ -22,8 +31,6 @@ class Path {
       // Append a new Point to the path.
       $this->points[] = new Point($x, $y);
     }
-
-    // Update the length. 
   }
 
   /**

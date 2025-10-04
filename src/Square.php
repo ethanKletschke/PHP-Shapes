@@ -11,7 +11,12 @@ class Square extends Rectangle {
    * The length of the sides of the square.
    * @var int
    */
-  private int $sides;
+  private int $sides {
+    get => $this->sides;
+    // Sets the side length to 1 or the assigned value depending on which is bigger.
+    // Prevents an invalid side length from being entered.
+    set => $this->sides = max(1, $value);
+  }
 
   /**
    * @param int $sides The length of the square's sides.
