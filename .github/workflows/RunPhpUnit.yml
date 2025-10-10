@@ -22,4 +22,4 @@ jobs:
         run: composer install --no-progress --prefer-dist --no-interaction
 
       - name: Run PHPUnit
-        run: ./vendor/bin/phpunit --testdox --verbose
+        run: ./vendor/bin/phpunit --testdox
