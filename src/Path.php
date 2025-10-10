@@ -5,6 +5,7 @@ namespace PHPShapes\Shapes;
 /**
  * Defines a path made up of multiple Points.
  * @author EthanKletschke <ethankletschke@outlook.com>
+ * @since 0.2.0
  */
 class Path {
   /**
@@ -19,17 +20,25 @@ class Path {
   /**
    * An array of points that make up the path.
    * @var \PHPShapes\Shapes\Point[]
+   * @since 0.2.0
    */
   private array $points;
 
   /**
-   * @param int[][] $points A two-dimensional array of integers to initialise the path with.
-   * @since 0.2.0
+   * @param int[][] $points A two-dimensional array of integers to initialise the path with. If passed
+   * an empty array, will append null to the path.
    */ 
   public function __construct(array $points) {
-    foreach ($points as [$x, $y]) {
-      // Append a new Point to the path.
-      $this->points[] = new Point($x, $y);
+    // If passed an empty array
+    if (count($points) === 0) {
+      // Append null to the path, to be set later on.
+      $this->points[] = null;
+    } else {
+      // For every point passed to the constructor
+      foreach ($points as [$x, $y]) {
+        // Append a new Point object to the path.
+        $this->points[] = new Point($x, $y);
+      }
     }
   }
 
@@ -46,9 +55,14 @@ class Path {
 
   /**
    * Finds the highest index of the path's points array.
-   * @return int the count of the points - 1.
+   * @return int the count of the points - 1, or 0 if empty.
+   * @since 0.2.0
    */
   public function getHighestIndex(): int {
+    if (count($this->points) === 0) {
+      return 0;
+    }
+
     return count($this->points) - 1;
   }
 
@@ -69,5 +83,19 @@ class Path {
 
     // Return the point at the specified index if it is a valid index.
     return $this->points[$index];
+  }
+
+  /**
+   * Sets a point at a specific index. It is recommended to use
+   * this when passing an empty array to the constructor, or if
+   * you want to re-set a point at a specific index.
+   * @param int $x The new X value.
+   * @param int $y The new Y value.
+   * @param int $index The index at which to set the point. Default value is 0.
+   * @return void
+   * @since 0.4.0
+   */
+  public function setPointAt(int $x, int $y, int $index = 0): void {
+    $this->points[$index] = new Point($x, $y);
   }
 }

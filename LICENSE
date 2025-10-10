@@ -1,4 +1,4 @@
-MIT License
+MIT License with Additional Terms
 
 Copyright (c) 2025 Ethan Kletschke
 
@@ -11,6 +11,10 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+ADDITIONAL TERMS:
+This software may not be used for training, fine-tuning, or otherwise
+developing artificial intelligence or machine learning models.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

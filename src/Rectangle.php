@@ -10,13 +10,22 @@ class Rectangle implements IShape {
   /**
    * The vertical length of the rectangle.
    * @var int
+   * @since 0.1.0
    */
   private int $length;
   /**
    * The horizontal width of the rectangle.
    * @var int
+   * @since 0.1.0
    */
   private int $width;
+
+  /**
+   * The size of the interior angles of a rectangle or square.
+   * @var int
+   * @since 0.4.0
+   */
+  private const int ANGLE_SIZE = 90;
 
   /**
    * @param int $length The vertical length of the rectangle. 
@@ -33,6 +42,7 @@ class Rectangle implements IShape {
    * being calculated, <code>l</code> is the length of the rectangle, 
    * and <code>w</code> is the width of the rectangle.
    * @return int The integer area of the rectangle.
+   * @since 0.1.0
    */
   public function getArea(): int {
     return $this->length * $this->width;

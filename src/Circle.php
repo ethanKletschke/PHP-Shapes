@@ -5,6 +5,7 @@ namespace PHPShapes\Shapes;
 /**
  * Defines a round shape with a radius and a center point.
  * @author EthanKletschke <bbruhingson@gmail.com>
+ * @since 0.1.0
  */
 class Circle implements IShape {
   /**
