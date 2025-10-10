@@ -4,6 +4,7 @@ declare(strict_types=1);
 use PHPShapes\Shapes\Square;
 use PHPUnit\Framework\TestCase;
 
+require __DIR__ . "/../src/IShape.php";
 require __DIR__ . "/../src/Rectangle.php";
 require __DIR__ . "/../src/Square.php";
 
