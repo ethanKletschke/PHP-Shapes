@@ -28,15 +28,6 @@ This project was (surprisingly) inspired by
 which is a site I used to self-teach a lot of my
 programming skills.
 
-## Most Recent Change (v0.4.0)
+## Most Recent Change (v0.4.1)
 
-Big update this time! :) 
-
-- Add the `Polygon` class, which defines a shape with any number of sides, 
-  defined by its corner points.
-- Start adding unit tests.
-  - Added `PathTest.php` to test the `Path` class.
-  - Added `SquareTest.php` to test the `Square` class.
-- Fixed the `Path` class's constructor and `getHighestIndex()` method
-  to properly handle being passed an empty array.
-- Added distance functions (and private `sqr()` and `square()` methods) to the `Point` class.
+- Fixed unit testing to properly run with GitHub workflow.
