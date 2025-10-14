@@ -35,3 +35,4 @@ programming skills.
 - Added a `RectangleTest` class under the `tests` folder.
 - Tweaked the methods called in the `SquareTest` class's tests 
   to use keyword arguments in order to make the code a bit more readable.
+- Add better handling of negative values in the `Rectangle` constructor.
