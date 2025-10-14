@@ -16,18 +16,18 @@ use \PHPUnit\Framework\TestCase;
  */
 class SquareTest extends TestCase {
   public function testGetArea(): void {
-    $s1 = new Square(5); // Area = 25
-    $s2 = new Square(10); // Area = 100
-    $s3 = new Square(15); // Area = 225
+    $s1 = new Square(sides: 5); // Area = 25
+    $s2 = new Square(sides: 10); // Area = 100
+    $s3 = new Square(sides: 15); // Area = 225
 
-    $this->assertEquals( $s1->getArea(), 25);
-    $this->assertEquals($s2->getArea(), 100);
-    $this->assertEquals($s3->getArea(), 225);
+    $this->assertEquals(expected: $s1->getArea(), actual: 25);
+    $this->assertEquals(expected: $s2->getArea(), actual: 100);
+    $this->assertEquals(expected: $s3->getArea(), actual: 225);
   }
 
   public function testSidesPropertyHook(): void {
-    $s = new Square(5);
+    $s = new Square(sides: 5);
 
-    $this->assertEquals($s->sides, 5);
+    $this->assertEquals(expected: $s->sides, actual: 5);
   }
 }

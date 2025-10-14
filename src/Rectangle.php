@@ -32,8 +32,8 @@ class Rectangle implements IShape {
    * @param int $width The horizontal width of the rectangle.
    */
   public function __construct(int $length, int $width) {
-    $this->length = $length;
-    $this->width = $width;
+    $this->length = (int) abs($length);
+    $this->width = (int) abs($width);
   }
 
   /**

@@ -30,25 +30,8 @@ This project was (surprisingly) inspired by
 which is a site I used to self-teach a lot of my current
 programming skills.
 
-## Most Recent Changes (v0.5.0)
+## Most Recent Changes (v0.6.0)
 
-Yay! Big update!
-
-- Tweaked documentation comments across most files.
-- Tweaked and added more to unit testing.
-  - Usec `require_once` instead of `require` to "import" the classes into the test
-    files.
-  - Added `CircleTest.php` to test the `Circle` class.
-  - Added to `SquareTest.php`.
-    - Add a function to test the `sides` property's `get` hook.
-  - Tweaked `PathTest.php` to reflect changes in the `Path` class.
-- Tweaked `Path.php`.
-  - The `$points` array is now initialised as an empty array by default.
-  - The constructor now only initialises the `$points` array
-    if the array passed to the constructor is not empty.
-  - Tweaked `setPointAt()` 
-    - The method now properly handles a `null` value in `$points`.
-- Tweaked `Circle.php` and added a method to create a `Circle` instance via a "circle string".
-  - `createFromCircleString()` is a static method.
-- Start working on `Polygon` class.
-- Fixed all property hooks to be public and actually function outside the class.
+- Added a `RectangleTest` class under the `tests` folder.
+- Tweaked the methods called in the `SquareTest` class's tests 
+  to use keyword arguments in order to make the code a bit more readable.
