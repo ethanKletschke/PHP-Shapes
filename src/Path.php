@@ -13,7 +13,7 @@ class Path {
    * @var int
    * @since 0.3.0
    */
-  private int $len {
+  public int $len {
     get => count($this->points);
   }
 
@@ -22,7 +22,7 @@ class Path {
    * @var \PHPShapes\Shapes\Point[]
    * @since 0.2.0
    */
-  private array $points;
+  private array $points = [];
 
   /**
    * @param int[][] $points A two-dimensional array of integers to initialise the path with. If passed
@@ -30,10 +30,7 @@ class Path {
    */ 
   public function __construct(array $points) {
     // If passed an empty array
-    if (count($points) === 0) {
-      // Append null to the path, to be set later on.
-      $this->points[] = null;
-    } else {
+    if (count($points) !== 0) {
       // For every point passed to the constructor
       foreach ($points as [$x, $y]) {
         // Append a new Point object to the path.
@@ -87,8 +84,7 @@ class Path {
 
   /**
    * Sets a point at a specific index. It is recommended to use
-   * this when passing an empty array to the constructor, or if
-   * you want to re-set a point at a specific index.
+   * this if you want to re-set a point at a specific index.
    * @param int $x The new X value.
    * @param int $y The new Y value.
    * @param int $index The index at which to set the point. Default value is 0.
@@ -96,6 +92,13 @@ class Path {
    * @since 0.4.0
    */
   public function setPointAt(int $x, int $y, int $index = 0): void {
-    $this->points[$index] = new Point($x, $y);
+    if ($this->points[$index] === null) {
+      // Instantiate a new Point.
+      $this->points[$index] = new Point($x, $y);
+    } else {
+      // Set the coordinates of the existing point.
+      $this->points[$index]->setX($x);
+      $this->points[$index]->setY($y);
+    }
   }
 }

@@ -4,9 +4,10 @@ namespace PHPShapes\Shapes;
 
 /**
  * Defines a shape with any number of sides, defined
- * with an array of corner points.
+ * with an array of corner points. WIP Class.
  * @author EthanKletschke <ethankletschke@outlook.com>
- * @since 0.4.0
+ * @deprecated Class is still a WIP. Do not use.
+ * @since 0.5.0
  */
 class Polygon {
   /**
@@ -18,11 +19,9 @@ class Polygon {
   /**
    * @param int[][] $points
    */
-  public function __construct(array $points) {
-    if (count($points) === 0) {
-      $this->corners[] = null;
-    } else {
-      foreach ($points as [$x, $y]) {
+  public function __construct(array $cornerPoints) {
+    if (count($cornerPoints) !== 0) {
+      foreach ($cornerPoints as [$x, $y]) {
         $this->corners[] = new Point($x, $y);
       }
     }

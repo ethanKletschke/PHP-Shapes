@@ -14,7 +14,7 @@ class Square extends Rectangle {
    * @var int
    * @since 0.1.0
    */
-  private int $sides {
+  public int $sides {
     get => $this->sides;
     // Sets the side length to the absolute value of the new length.
     set => $this->sides = abs($value);

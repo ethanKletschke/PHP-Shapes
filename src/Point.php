@@ -139,7 +139,7 @@ class Point {
    */
   public static function distance(Point $p1, Point $p2): float {
     // Calculate the distance between the 2 points.
-    $distance = sqrt(Point::square($p1->x - $p2->x) + Point::square($p1->y - $p2->y));
+    $distance = sqrt(self::square($p1->x - $p2->x) + self::square($p1->y - $p2->y));
 
     return $distance;
   }
@@ -158,7 +158,7 @@ class Point {
   /**
    * Returns the square of a number. Static version of "sqr", used within other 
    * static methods.
-   * @param float|int $num THe number to raise to the power of 2.
+   * @param float|int $num The number to raise to the power of 2.
    * @return float|int The result of the exponentiation.
    * @static
    * @since 0.4.0

@@ -25,7 +25,7 @@ class Rectangle implements IShape {
    * @var int
    * @since 0.4.0
    */
-  private const int ANGLE_SIZE = 90;
+  final public const int ANGLE_SIZE = 90;
 
   /**
    * @param int $length The vertical length of the rectangle. 
