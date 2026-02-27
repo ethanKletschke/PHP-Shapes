@@ -1,0 +1,28 @@
+project-meta:
+  project-name: PHP Shapes Library
+  languages:
+    - PHP
+  status: Deprecated
+  license: MIT
+  version: 0.6.0
+
+build:
+  dev-environments:
+    - Windows 11
+  test-environments:
+    - Windows 11
+  target-platforms:
+    - Windows 11
+  interpreter:
+    interpreter-name: PHP
+    interpreter-version: 8.4.12
+
+team:
+  author: Ethan Kletschke
+  contributors:
+    - name: Ethan Kletschke
+      role: Author and Owner
+      github-username: ethanKletschke
+
+misc-metadata:
+  reason-for-deprecation: Quit PHP

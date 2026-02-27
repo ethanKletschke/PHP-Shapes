@@ -5,6 +5,7 @@ A shape library for PHP. Meant as a skills reference only.
 - Author: Ethan Kletschke
 - Version: `0.6.0`
 - Environment(s): Windows 11
+- Project metadata file: [project.yaml](./meta/project.yaml)
 - License: MIT (See below)
 
 As of version 0.4.0, this project is licensed under a modified MIT License that prohibits AI training.
